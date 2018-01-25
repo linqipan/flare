@@ -1,0 +1,17 @@
+{
+  "inlet_dia":400,
+  "inlet_length":1500,
+  "inlet_thick":12,
+  "nozzle_dia":300,
+  "nozzle_length":400,
+  "nozzle_thick":12,
+  "pad_width":25,
+  "pad_thick":12,
+  "inlet_material":{"young": 70000,"nu": 0.3,"expansion":3.5e-5},
+  "nozzle_material":{"young": 70000,"nu": 0.3,"expansion":3.5e-5},
+  "pad_material":{"young": 70000,"nu": 0.3,"expansion":3.5e-5},
+  "inlet_load":{"Fx": 0, "Fy": 0, "Fz": 100, "Mx": 0, "My": 0, "Mz": 0},
+  "nozzle_load":{"Fx": 10, "Fy": 0, "Fz": 0, "Mx": 0, "My": 1000, "Mz": 0},
+  "Temp":20.0,
+  "el_size": 30
+}

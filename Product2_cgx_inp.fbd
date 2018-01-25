@@ -1,0 +1,19 @@
+read product2_ccx.frd
+rot r 75
+rot u -0
+#view fill
+#view elem on
+#view elem
+ds 1 e 4
+plot fv all
+hcpy png
+sys move hcpy_1.png Disp_vector.png
+ds 2 e 1
+plot fv all
+hcpy png
+sys move hcpy_2.png Temp_plot.png
+ds 3 e 7
+plot fv all
+hcpy png
+sys move hcpy_3.png Von_Mises.png
+quit

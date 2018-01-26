@@ -1,0 +1,12 @@
+{
+  "top_dia":10,
+  "bottom_dia":20,
+  "height":60,
+  "inlet_material":{"young": 70000,"nu": 0.3,"expansion":3.5e-5},
+  "inlet_load":{"Fx": 0, "Fy": 0, "Fz": 100, "Mx": 0, "My": 0, "Mz": 0},
+  "Pressure_load":{"Area":"surface1", "mag":1000},
+  "Temp":20.0,
+  "second_order":1,
+  "refine_level":0,
+  "min_ele": 2
+}

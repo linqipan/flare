@@ -82,9 +82,9 @@ Line Loop(9) = {11, -5, -10, 2};\n\
 Surface(4) = {9};\n")
 
     geo_file.write('Physical Line("top") = {6, 5, 7, 8};\n'+\
-    'Physical Line("bot") = {3, 4, 1, 2};\n'+\
-    'Physical Surface("press") = {1};\n')
-    
+    'Physical Line("bot") = {3, 4, 1, 2};\n')
+    if(data_store['Pressure_load']['Area'] != None):
+        geo_file.write('Physical Surface("%s") = {1};\n' % data_store['Pressure_load']['Area'])
 
     geo_file.write("// Mesh level // \n \n")
     """

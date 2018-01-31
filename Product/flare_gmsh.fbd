@@ -1,0 +1,7 @@
+read flare_gmsh.inp
+zap +T3D2
+send all abq
+comp press do
+send press abq sur
+send top abq nam
+send bot abq nam

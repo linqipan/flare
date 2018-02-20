@@ -2,12 +2,16 @@
   "top_dia":10,
   "bottom_dia":20,
   "height":60,
-  "inlet_material":{"young": 70000,"nu": 0.3,"expansion":3.5e-5},
+  "inlet_thick":5,
+  "inlet_material":{"young": 70000,"density":200,"nu": 0.3,"expansion":3.5e-5},
   "inlet_load":{"Fx": 0, "Fy": 0, "Fz": 100, "Mx": 0, "My": 0, "Mz": 0},
   "Pressure_load":{"Area":"press", "mag":1000},
   "Temp":20.0,
   "second_order":1,
   "refine_level":0,
   "min_ele": 2,
-  "shell_ele": 1
+  "shell_ele": 0,
+  "inlet_load1":{"Fx": 0, "Fy": 0, "Fz": 100, "Mx": 0, "My": 0, "Mz": 0},
+  "inlet_load2":{"Fx": 0, "Fy": 0, "Fz": 100, "Mx": 0, "My": 0, "Mz": 0},
+  "inlet_load3":{"Fx": 0, "Fy": 0, "Fz": 100, "Mx": 0, "My": 0, "Mz": 0}
 }

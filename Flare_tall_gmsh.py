@@ -74,6 +74,7 @@ class flaregeo(object):
                 surface_num.extend((4*j-3,4*j-2,4*j-1,4*j))
             surface_str = ", ".join(map(str,surface_num))
             gmshfile.write('Physical Surface("section%s") = {%s};\n'%(str(i),surface_str))
+        gmshfile.write('Physical Line("inlet_end_1") = {1, 2, 3, 4};')
             
         ### wind surface ###
         

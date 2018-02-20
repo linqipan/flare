@@ -76,6 +76,7 @@ Physical Surface("bottom") = {1, 2, 3, 4};
 Physical Surface("middle") = {5, 6, 7, 8};
 //+
 Physical Surface("top") = {11, 12, 9, 10};
+Physical Line("inlet_end_1") = {1, 2, 3, 4};
 
 Mesh.SurfaceFaces = 1;
 Mesh.VolumeEdges = 0;
@@ -95,3 +96,4 @@ Mesh.SaveAll = 1;
 Mesh.SaveGroupsOfNodes = 1;
 Save "flare_gmsh_test.inp";
 Save "flare_gmsh_test.stl";
+//Exit;

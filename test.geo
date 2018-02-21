@@ -96,9 +96,9 @@ Mesh.CharacteristicLengthMax = 0.500;
 Mesh 2;
 Print.Background = 1;
 BoundingBox;
-Print "ScreenMesh.png";
+//Print "ScreenMesh.png";
 Mesh.SaveAll = 1;
 Mesh.SaveGroupsOfNodes = 1;
 Save "flare_gmsh_test.inp";
-Save "flare_gmsh_test.stl";
+//Save "flare_gmsh_test.stl";
 //Exit;//+

@@ -9,7 +9,7 @@ with open('flaregeometry.oofem','r') as json_file:
 with open('model.dsgn') as wind_file:
     wind_data = json.load(wind_file)
     
-mesh_level = {'refine_level':2,'second_order':2, 'min_ele': 1}
+mesh_level = {'refine_level':0,'second_order':2, 'min_ele': 5}
 
 class flaregeo(object):
     
@@ -74,7 +74,7 @@ class flaregeo(object):
                 surface_num.extend((4*j-3,4*j-2,4*j-1,4*j))
             surface_str = ", ".join(map(str,surface_num))
             gmshfile.write('Physical Surface("section%s") = {%s};\n'%(str(i),surface_str))
-        gmshfile.write('Physical Line("inlet_end_1") = {1, 2, 3, 4};')
+        gmshfile.write('Physical Line("inlet_end_1") = {1, 2, 3, 4};\n')
             
         ### wind surface ###
         

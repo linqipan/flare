@@ -56,5 +56,16 @@ with open('flare_tall_ccx.inp','wb') as inp_file:
     inp_file.write('Eall,GRAV,9.81,0.,0.,-1.\n')
 
     #### pressure ######
-    
+    j =1
+    inp_file.write('*DSLOAD\n')
+    for i in wind_data['elementArray']:
+        inp_file.write('Swindsurf%s, P, %.2f\n'%(str(j),i['F']))
+        j +=1 
+
+        #============== OUTPUT =================####
+    inp_file.write('*NODE FILE,OUTPUT=3D\n'+\
+                    'RF,U,NT\n'+\
+                    '*EL FILE\n'+\
+                    'S,E\n'+\
+                    '*END STEP')
 

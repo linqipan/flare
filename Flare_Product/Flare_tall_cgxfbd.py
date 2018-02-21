@@ -10,17 +10,20 @@ with open('model.dsgn') as wind_file:
 
 with open('flare_gmsh_test.inp','r') as msh_file:
     msh_content = msh_file.read()
+    msh_content = msh_content.replace('CPS3', 'S3')
+    with open('flare_gmsh_test.inp', 'w') as newfile:
+        newfile.write(msh_content)
 
 
 with open('flare_tall_gmsh.fbd','wb') as fbd_file:
     fbd_file.write('read flare_gmsh_test.inp\n')
-    if('+T3D2' in msh_content):
+    if('T3D2' in msh_content):
         fbd_file.write('zap +T3D2\n')
 
     fbd_file.write('send all abq\n')
 
     for i in range(len(flare['BeamSections'])):
-        fbd_file.write('send section%s abq\n'%str(i+1))
+        fbd_file.write('send section%s abq names\n'%str(i+1))
 
     ### default bottom fix #####
     fbd_file.write('send inlet_end_1 abq nam\n')

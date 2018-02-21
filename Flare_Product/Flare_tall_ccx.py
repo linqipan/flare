@@ -25,7 +25,7 @@ with open('flare_tall_ccx.inp','wb') as inp_file:
     inp_file.write('*INCLUDE, INPUT= inlet_end_1.nam\n')
 
     for i in range(len(flare['BeamSections'])):
-        inp_file.write('*INCLUDE, section%s.msh\n' % str(i+1))
+        inp_file.write('*INCLUDE,INPUT= section%s.nam\n' % str(i+1))
 
     for i in range(1, len(wind_data['elementArray'])+1):
         inp_file.write('*INCLUDE, INPUT= windsurf%s.sur\n' % str(i))
@@ -44,7 +44,7 @@ with open('flare_tall_ccx.inp','wb') as inp_file:
     ### solid section ####
 
     for i in flare['BeamSections']:
-        inp_file.write('*SOLID SECTION,MATERIAL=material_%s,ELSET=Esection%s\n' % (str(i['Label']), str(i['Label'])) +\
+        inp_file.write('*SHELL SECTION,MATERIAL=material_%s,ELSET=Esection%s\n' % (str(i['Label']), str(i['Label'])) +\
                        '%d\n' %thick_list[int(i['Label']-1)])
 
     inp_file.write('*INITIAL CONDITIONS,TYPE=TEMPERATURE\n' +\
